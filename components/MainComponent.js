@@ -11,7 +11,7 @@ class Main extends Component {
   }
 
   render() {
-    return <Directory campsites={this.state.campsites} />;
+    return (<Directory campsites={this.state.campsites} />);
   }
 }
 

@@ -11,15 +11,15 @@ function Directory(props) {
           subtitle={item.description}
           leftAvatar={{ source: require('./images/react-lake.jpg')}}
       />
-    )
-  }
+    );
+  };
   return (
     <FlatList 
         data={props.campsites}
         renderItem={renderDirectoryItem}
         keyExtractor={item => item.id.toString()}
     />
-  )
-}
+  );
+};
 
 export default Directory;
