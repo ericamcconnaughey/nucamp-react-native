@@ -21,7 +21,6 @@ class Contact extends Component {
               style={{marginBottom: 10}}>U.S.A</Text>
             <Text>Phone: 1-206-555-1234</Text>
             <Text>Email: campsites@nucamp.co</Text>
-
         </Card>
       </ScrollView>
     );
