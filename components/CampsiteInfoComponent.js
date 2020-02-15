@@ -102,7 +102,6 @@ class CampsiteInfo extends Component {
 
   handleComment(campsiteId) {
     this.toggleModal();
-    console.log(comment)
     this.props.postComment(campsiteId, this.state.rating, this.state.author, this.state.text);
   }
 
@@ -167,7 +166,7 @@ class CampsiteInfo extends Component {
                 title='Submit'
                 color='#5637DD'
                 onPress={() => {
-                  this.handleComment();
+                  this.handleComment(campsiteId);
                   this.resetForm();
                 }} 
               />
@@ -176,7 +175,8 @@ class CampsiteInfo extends Component {
               <Button
                   onPress={() => {
                     this.toggleModal();
-                    this.resetForm();}}
+                    this.resetForm();
+                  }}
                   color="#808080"
                   title="Cancel" />
             </View>
