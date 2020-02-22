@@ -29,6 +29,8 @@ function RenderCampsite(props) {
 
   const recognizeDrag = ({dx}) => (dx < -200) ? true : false;
 
+  const recognizeComment = ({dx}) => (dx > 200) ? true : false;
+
   const panResponder = PanResponder.create({
     onStartShouldSetPanResponder: () => true,
     onPanResponderGrant: () => {
@@ -40,7 +42,7 @@ function RenderCampsite(props) {
       if (recognizeDrag(gestureState)) {
         Alert.alert(
           'Add Favorite',
-          'Are you sure you wish to add ' + campsite.name + ' to favorite?',
+          `Are you sure you wish to add ${campsite.name} to favorite?`,
           [
             {
               text: 'Cancel',
@@ -54,7 +56,10 @@ function RenderCampsite(props) {
             }
           ],
           { cancelable: false }
-        );
+        )
+      }
+      else if (recognizeComment(gestureState)) {
+        this.toggleModal
       }
       return true;
     }

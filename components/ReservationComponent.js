@@ -19,9 +19,6 @@ class Reservation extends Component {
     title: 'Reserve Campsite'
   }
 
-
-  
-
   resetForm() {
     this.setState({
       campers: 1,
@@ -86,9 +83,7 @@ class Reservation extends Component {
           <Button
               onPress={() => Alert.alert(
                 'Begin Search?',
-                `Number of campers: ` + this.state.campers + '\n' +
-                `Hike-In? ` + this.state.hikeIn + `\n` +
-                `Date: ` + this.state.date
+                `Number of campers: ${this.state.campers} \nHike-In? ${this.state.hikeIn} \nDate: ${this.state.date}`,
                 [
                   {
                     text: 'Cancel',
