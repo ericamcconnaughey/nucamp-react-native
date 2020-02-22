@@ -23,7 +23,7 @@ const mapDispatchToProps = {
 
 function RenderCampsite(props) {
 
-  const {campsite} = props;
+  const {campsite } = props;
 
   const view = React.createRef();
 
@@ -59,7 +59,7 @@ function RenderCampsite(props) {
         )
       }
       else if (recognizeComment(gestureState)) {
-        this.toggleModal
+        props.onShowModal();
       }
       return true;
     }
