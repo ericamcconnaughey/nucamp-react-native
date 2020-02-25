@@ -23,7 +23,7 @@ const mapDispatchToProps = {
 
 function RenderCampsite(props) {
 
-  const {campsite } = props;
+  const {campsite} = props;
 
   const view = React.createRef();
 
