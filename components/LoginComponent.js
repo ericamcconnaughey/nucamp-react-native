@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { View, Button, StyleSheet } from 'react-native';
-import {Input, CheckBox } from 'react-native-elements';
+import { Input, CheckBox } from 'react-native-elements';
 import * as SecureStore from 'expo-secure-store';
 
 class Login extends Component {
@@ -64,7 +64,7 @@ class Login extends Component {
         <CheckBox
           title='Remember Me'
           center
-          checked={this.state.checked}
+          checked={this.state.remember}
           onPress={() => this.setState({remember: !this.state.remember})}
           containerStyle={styles.formCheckBox}
         />
